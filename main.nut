@@ -1,22 +1,26 @@
-/** 
+/**
  * Library class 
  */
 class Common {}
 
 /**
- * acall replacement to support do command
- * @param func Function to execute
- * @args Array of arguments, min. [this]
- * @return Value of function called
- * @note args[0] should be 'this' or environment.
+ * Call a function with the arguments packed in the args array.
+ * @param func Function to execute.
+ * @param args Array of arguments. The first argument will be used as 'this'
+ *  in the function that is called. You can use this to call a member
+ *  function in a non-static way. If you want to call a static function,
+ *  use null as first item of the args array.
+ * @return Return value of the called function.
  */
 function Common::ACall(func, args)
 {
 	assert(typeof(func) == "function");
 	assert(typeof(args) == "array");
+	assert(args.len() > 0);
+
 	this = args[0];
 	switch (args.len()) {
-	   	case 1: return func();
+		case 1: return func();
 		case 2: return func(args[1]);
 		case 3: return func(args[1], args[2]);
 		case 4: return func(args[1], args[2], args[3]);
@@ -29,8 +33,13 @@ function Common::ACall(func, args)
 }
 
 /**
- * Get current OpenTTD running version
- * @return structured tabel of version.
+ * Get current OpenTTD version and print it to the AI log.
+ * @return A table with seperate fields for each version part:
+ * - Major: the major version
+ * - Minor: the minor version
+ * - Build: the build
+ * - IsRelease: is this an stable release
+ * - Revision: the svn revision of this build
  */
 function Common::GetVersion()
 {
