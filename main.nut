@@ -33,7 +33,7 @@ function Common::ACall(func, args)
 }
 
 /**
- * Get current OpenTTD version and print it to the AI log.
+ * Get current OpenTTD version.
  * @return A table with seperate fields for each version part:
  * - Major: the major version
  * - Minor: the minor version
@@ -51,8 +51,10 @@ function Common::GetVersion()
 		IsRelease = (v & 0x00080000) != 0,
 		Revision = v & 0x0007FFFF,
 	}
+	/* this is only for example on how to use it
 	AILog.Info("Run On OpenTTD Ver:" + 
 		tmp.Major + "." + tmp.Minor + " Build:" + tmp.Build + " (" + 
 		(tmp.IsRelease ?  "Release" : "Rev." + tmp.Revision) + ")");
+	*/
 	return tmp;
 }
