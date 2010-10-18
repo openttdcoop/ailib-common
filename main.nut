@@ -37,7 +37,7 @@ class Common
 	 *  use null as first item of the args array.
 	 * @return Return value of the called function.
 	 */
-	function ACall(func, args)
+	static function ACall(func, args)
 	{
 		assert(typeof(func) == "function");
 		assert(typeof(args) == "array");
@@ -66,7 +66,7 @@ class Common
 	 * - IsRelease: is this an stable release
 	 * - Revision: the svn revision of this build
 	 */
-	function GetVersion()
+	static function GetVersion()
 	{
 		local v = AIController.GetVersion();
 		local tmp = {
