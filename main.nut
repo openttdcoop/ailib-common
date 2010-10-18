@@ -17,6 +17,12 @@
 	Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
 */
 
+print("Using AILib.Common version 2");
+print("Author           : OpenTTD NoAI Community");
+print("License          : GPL version 2.0");
+print("Original coder   : Thijs Marinussen (Yexo)");
+print("");
+
 /**
  * Library class 
  */
