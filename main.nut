@@ -13,7 +13,7 @@
 	General Public License for more details.
 
 	You should have received a copy of the GNU General Public
-	License along with this AI Library - Common; if not, write to the Free Software
+	License along with AI Library - Common; if not, write to the Free Software
 	Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
 */
 
@@ -24,7 +24,7 @@ print("Original coder   : Thijs Marinussen (Yexo)");
 print("");
 
 /**
- * Library class 
+ * Library class
  */
 class Common
 {
@@ -37,12 +37,10 @@ class Common
 	 *  use null as first item of the args array.
 	 * @return Return value of the called function.
 	 */
-	static function ACall(func, args)
-	{
+	static function ACall(func, args) {
 		assert(typeof(func) == "function");
 		assert(typeof(args) == "array");
 		assert(args.len() > 0);
-
 		this = args[0];
 		switch (args.len()) {
 			case 1: return func();
@@ -66,8 +64,7 @@ class Common
 	 * - IsRelease: is this an stable release
 	 * - Revision: the svn revision of this build
 	 */
-	static function GetVersion()
-	{
+	static function GetVersion() {
 		local v = AIController.GetVersion();
 		local tmp = {
 			Major = (v & 0xF0000000) >> 28,
