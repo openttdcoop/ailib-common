@@ -76,11 +76,6 @@ class Common
 			IsRelease = (v & 0x00080000) != 0,
 			Revision = v & 0x0007FFFF,
 		}
-		/* this is only for example on how to use it
-		AILog.Info("Run On OpenTTD Ver:" + 
-			tmp.Major + "." + tmp.Minor + " Build:" + tmp.Build + " (" + 
-			(tmp.IsRelease ?  "Release" : "Rev." + tmp.Revision) + ")");
-		*/
 		return tmp;
 	}
 }
