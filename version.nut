@@ -17,19 +17,8 @@
 	Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
 */
 
-require("version.nut");
-
-class LibCommon extends AILibrary
-{
-	function GetAuthor()      { return "OpenTTD NoAI Community"; }
-	function GetName()        { return "Common"; }
-	function GetShortName()   { return "CLCF"; }
-	function GetDescription() { return "A collection of common functions"; }
-	function GetVersion()     { return revision; }
-	function GetAPIVersion()  { return "1.0"; }
-	function GetDate()        { return "2009-08-01"; }
-	function CreateInstance() { return "Common"; }
-	function GetCategory()    { return "AILib"; }
-}
-
-RegisterLibrary(LibCommon());
+/*
+	This file would only be used when you wan to use the library directly from
+	repository. Use 'make' to get the actual revision number
+*/
+revision  <- 1

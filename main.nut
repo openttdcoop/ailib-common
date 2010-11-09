@@ -16,8 +16,9 @@
 	License along with AI Library - Common; if not, write to the Free Software
 	Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
 */
+require("version.nut");
 
-print("Using AILib.Common version 2");
+print("Using AILib.Common version" + revision);
 print("Author           : OpenTTD NoAI Community");
 print("License          : GPL version 2.0");
 print("Original coder   : Thijs Marinussen (Yexo)");
