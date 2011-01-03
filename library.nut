@@ -24,8 +24,8 @@ class LibCommon extends AILibrary
 	function GetAuthor()      { return "OpenTTD NoAI Community"; }
 	function GetName()        { return "Common"; }
 	function GetShortName()   { return "CLCF"; }
-	function GetDescription() { return "A collection of common functions"; }
-	function GetVersion()     { return revision; }
+	function GetDescription() { return "A collection of common functions. Rev:" + revision; }
+	function GetVersion()     { return version; }
 	function GetAPIVersion()  { return "1.0"; }
 	function GetDate()        { return "2009-08-01"; }
 	function CreateInstance() { return "Common"; }

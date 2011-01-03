@@ -18,7 +18,7 @@
 */
 require("version.nut");
 
-print("Using AILib.Common version" + revision);
+print("Using AILib.Common version " + version + " rev: " + revision);
 print("Author           : OpenTTD NoAI Community");
 print("License          : GPL version 2.0");
 print("Original coder   : Thijs Marinussen (Yexo)");
